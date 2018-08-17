@@ -1,0 +1,171 @@
+
+1. What are the primitive data types. Write the default values for them. Write the equivalent wrapper classes for them.
+
+Ans:-The primitive datatypes in java are
+primitive datatypes       default values    wrapper classes 
+---------------------    ---------------   -------------------
+        boolean - false -Boolean
+         byte -0 -Byte
+       char -\u0000  -Character
+         short -0 -Short
+          int -0 -Integer
+          long -0L -Long
+          float-0.0f -Float
+          double -0.0d -Double
+
+2. Is this following statement correct for the Employee class . 
+
+   Object obj=new Employee();
+   
+Ans:- No the above statement is not correct for the Employee class
+     the ans should be -  Employee obj= new Employee();
+	 
+3. If A is the Parent class of B then can we write A a=new B();
+
+Ans:NO 
+
+4. Correct the error if any.
+
+class A 
+{
+	
+}
+class B extends A 
+{
+
+}
+public class App 
+{
+	public static void main(String[] args)
+	{
+		getMyB();
+	}
+	
+	public B getMyB()
+	{
+		return new A();
+	}
+}
+
+
+ Ans:
+class A 
+{
+	 
+}
+class B extends A 
+{
+
+}
+public class App1
+{
+	public static void main(String[] args)
+	{
+		getMyB();
+	}
+	
+	public static A getMyB()
+	{
+		return new A();
+	}
+}
+5. write single statement here to display the output. Read main method below for instructions.
+
+abstract class A 
+{
+	abstract public void m1();
+	
+	public void m2()
+	{
+		m1();
+		m3();
+	}
+	
+	public void m3()
+	{
+		System.out.println("Hello");
+	}
+}
+
+class B extends A 
+{
+	public void m1()
+	{
+		System.out.println("Hi");
+	}
+	
+	public void m3()
+	{
+		System.out.println("Bye");
+	}
+}
+
+public class App 
+{
+	public static void main(String[] args)
+	{
+	A a =new B();//answer
+		a.m1();
+		a.m3()
+		// output must be like below 
+		// Hi
+		// Bye
+	}
+}
+
+6.  Read the main method below for instructions.
+interface IA
+{
+	public void m1();
+}
+
+class AImpl implements IA 
+{
+	public void m1()
+	{
+		System.out.println("Welcome");
+	}
+}
+
+
+class BImpl implements IA 
+{
+	public void m1()
+	{
+		System.out.println("Good Bye");
+	}
+}
+
+public class App 
+{
+	public static void main(String[] args)
+	{
+		IA a= new AImpl() ;//ANSWER
+		a.m1();// fill the above blank to get output as : Welcome 
+		
+		IA b=new BImpl ;//ANSWER
+		b.m1(); // fill the above blank to get the output as : Good Bye
+		
+	}
+}
+
+7. interface IEmployee
+{
+
+}
+
+Object obj=new IEmployee();
+
+Justify if this statement is valid or not?
+
+Ans: No the statement is not correct because we can't create an object of an interface.
+
+8. abstract class AbstractEmployeeeManager
+{
+
+}
+
+AbstractEmployeeeManager  mgr=new  AbstractEmployeeeManager ();
+Justify if this statement is valid or not?
+
+Ans:-The above statement is not valid because abstract class can't be instanciated.
